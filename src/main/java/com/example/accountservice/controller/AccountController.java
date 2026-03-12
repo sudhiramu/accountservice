@@ -38,7 +38,7 @@ public class AccountController {
     })
     @GetMapping("/{accountNumber}")
     public ResponseEntity<Account> getAccountByNumber(
-            @Parameter(description = "The 10-digit account number", required = true)
+            @Parameter(description = "The 4-digit account number range(1001-1004)", required = true)
             @PathVariable String accountNumber) {
 
         logger.info("Received API request to fetch account: {}", accountNumber);

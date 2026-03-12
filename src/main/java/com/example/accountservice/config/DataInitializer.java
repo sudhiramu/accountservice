@@ -17,9 +17,9 @@ public class DataInitializer {
     CommandLineRunner initDatabase(AccountRepository repository) {
         return args -> {
             logger.info("Preloading H2 Database with sample accounts...");
-            repository.save(new Account("1001", "Sudhir Tiwari", "USD", "New York"));
-            repository.save(new Account("1002", "Akansha Jain", "EUR", "Berlin"));
-            repository.save(new Account("1003", "Rahul Jain", "EUR", "Berlin"));
+            repository.save(new Account("1001", "Sudhir Tiwari", "USD", "New York","Morgan Stanley"));
+            repository.save(new Account("1002", "Akansha Jain", "EUR", "Berlin","Morgan Stanley"));
+            repository.save(new Account("1003", "Rahul Jain", "EUR", "Berlin","Morgan Stanley"));
             logger.info("H2 Database seeding complete.");
         };
     };
