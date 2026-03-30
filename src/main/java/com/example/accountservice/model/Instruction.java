@@ -6,14 +6,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Instruction {
-    public Instruction(String accountNumber, String currency, String instructionType, double amount, String branch, String bank) {
-        this.accountNumber = accountNumber;
-        this.currency = currency;
-        this.instructionType = instructionType;
-        this.amount = amount;
-        this.branch = branch;
-        this.bank = bank;
-    }
 
     public String getAccountNumber() {
         return accountNumber;
@@ -54,8 +46,14 @@ public class Instruction {
     public void setBranch(String branch) {
         this.branch = branch;
     }
-    public String getBank() { return bank; }
-    public void setBank(String bank) { this.bank = bank; }
+
+    public String getBank() {
+        return bank;
+    }
+
+    public void setBank(String bank) {
+        this.bank = bank;
+    }
 
     private String accountNumber;
     private String currency;

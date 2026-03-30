@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "accounts")
-@Data                // Generates Getters, Setters, toString, etc.
-@NoArgsConstructor   // Required by JPA
-@AllArgsConstructor  // Useful for your data loader
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Account {
 
     @Id
@@ -20,23 +20,4 @@ public class Account {
     private String currency;
     private String branch;
     private String bank;
-
-    public Account() {} // Required by JPA
-
-    public Account(String accountNumber, String accountHolderName, String currency, String branch, String bank) {
-        this.accountNumber = accountNumber;
-        this.accountHolderName = accountHolderName;
-        this.currency = currency;
-        this.branch = branch;
-        this.bank=bank;
-
-    }
-
-    public String getAccountNumber() { return accountNumber; }
-    public String getAccountHolderName() { return accountHolderName; }
-    public String getCurrency() { return currency; }
-    public String getBranch() { return branch; }
-    public String getBank() { return bank; }
-    public void setBank(String bank) { this.bank = bank; }
-
 }
